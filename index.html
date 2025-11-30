@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    <!-- Google Fonts for the specific look -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="logo-signature">&lt; Your Name /&gt;</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <!-- <li><a href="#projects">Projects</a></li> -->
+                <li><a href="support.html">Support</a></li> <!-- Required for Canva -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Your Name</h1>
+            <h2>( Canva_App_Dev )</h2>
+            <p class="hero-desc">
+                A passionate developer who thrives to work on end-to-end products which develop sustainable and scalable tools for the Canva ecosystem.
+            </p>
+
+<!--             <div class="social-icons">
+                <a href="#" class="icon"><i class="fab fa-github"></i></a>
+                <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="icon"><i class="fab fa-google"></i></a>
+                <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+            </div>
+
+            <a href="#" class="github-btn">
+                <i class="fas fa-star"></i> Star Me On Github
+            </a> -->
+			
+        </div>
+        
+        <div class="hero-image">
+            <!-- Using an SVG placeholder that looks like the illustration in your image -->
+            <img src="https://raw.githubusercontent.com/undraw/undraw/master/undraw_programming_2svr.svg" alt="Developer Illustration">
+        </div>
+    </section>
+
+    <div class="section-title">
+        <h1>What We Do?</h1>
+    </div>
+
+    <!-- Section 1: Data / Logic (Left Img, Right Text) -->
+    <section class="skill-row" id="skills">
+        <div class="skill-image">
+            <img src="https://raw.githubusercontent.com/undraw/undraw/master/undraw_data_processing_yrrv.svg" alt="Data Science">
+        </div>
+        <div class="skill-content">
+            <h2>Data Processing & AI</h2>
+            
+            <div class="tech-stack-icons">
+                <i class="fab fa-python" style="color:#3776AB;"></i>
+                <i class="fab fa-js" style="color:#F7DF1E;"></i>
+                <i class="fas fa-database" style="color:#336791;"></i>
+                <i class="fas fa-brain" style="color:#EA4C89;"></i>
+            </div>
+
+            <ul class="skill-list">
+                <li><i class="fas fa-bolt"></i> Developing scalable image processing models for Canva design exports.</li>
+                <li><i class="fas fa-bolt"></i> Experience integrating OpenAI and AI-generation APIs.</li>
+                <li><i class="fas fa-bolt"></i> Complex logic handling for dynamic design elements.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Section 2: Full Stack (Right Img, Left Text - handled by CSS order) -->
+    <section class="skill-row reverse-layout">
+        <div class="skill-image">
+            <img src="https://raw.githubusercontent.com/undraw/undraw/master/undraw_web_developer_p3e5.svg" alt="Full Stack">
+        </div>
+        <div class="skill-content">
+            <h2>Full Stack Development</h2>
+            
+            <div class="tech-stack-icons">
+                <i class="fab fa-html5" style="color:#E34F26;"></i>
+                <i class="fab fa-css3-alt" style="color:#1572B6;"></i>
+                <i class="fab fa-react" style="color:#61DAFB;"></i>
+                <i class="fab fa-node" style="color:#339933;"></i>
+                <i class="fab fa-npm" style="color:#CB3837;"></i>
+            </div>
+
+            <ul class="skill-list">
+                <li><i class="fas fa-bolt"></i> Building responsive Canva Apps using the Apps SDK.</li>
+                <li><i class="fas fa-bolt"></i> Developing interactive UI with React and TypeScript.</li>
+                <li><i class="fas fa-bolt"></i> creating application backends in Node, Express & Flask.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Section 3: Cloud Infra (Left Img, Right Text) -->
+    <section class="skill-row">
+        <div class="skill-image">
+            <img src="https://raw.githubusercontent.com/undraw/undraw/master/undraw_cloud_hosting_7xb1.svg" alt="Cloud">
+        </div>
+        <div class="skill-content">
+            <h2>Cloud Infra-Architecture</h2>
+            
+            <div class="tech-stack-icons">
+                <i class="fab fa-aws" style="color:#FF9900;"></i>
+                <i class="fab fa-google" style="color:#4285F4;"></i>
+                <i class="fab fa-docker" style="color:#2496ED;"></i>
+            </div>
+
+            <ul class="skill-list">
+                <li><i class="fas fa-bolt"></i> Experience working on AWS Lambda and Serverless functions.</li>
+                <li><i class="fas fa-bolt"></i> Hosting and maintaining secure backends for apps.</li>
+                <li><i class="fas fa-bolt"></i> Setting up streaming jobs for real-time data fetching.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Section 4: UI/UX (Right Img, Left Text) -->
+    <section class="skill-row reverse-layout">
+        <div class="skill-image">
+            <img src="https://raw.githubusercontent.com/undraw/undraw/master/undraw_design_components_9vy6.svg" alt="UI UX">
+        </div>
+        <div class="skill-content">
+            <h2>UI/UX Design</h2>
+            
+            <div class="tech-stack-icons">
+                <i class="fab fa-figma" style="color:#F24E1E;"></i>
+                <i class="fab fa-sketch" style="color:#F7B500;"></i>
+            </div>
+
+            <ul class="skill-list">
+                <li><i class="fas fa-bolt"></i> Designing highly attractive user interfaces for Canva Apps.</li>
+                <li><i class="fas fa-bolt"></i> Customizing assets to match the Canva editor look & feel.</li>
+                <li><i class="fas fa-bolt"></i> Creating flow of application functionalities to optimize UX.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>Made with <i class="fas fa-heart" style="color:red;"></i> by Your Name</p>
+        <div class="footer-links">
+            <a href="terms.html">Terms</a> | 
+            <a href="privacy.html">Privacy</a> | 
+            <a href="support.html">Support</a>
+        </div>
+    </footer>
+
+</body>
+</html>

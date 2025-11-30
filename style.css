@@ -1,0 +1,432 @@
+/* =========================================
+   1. GLOBAL VARIABLES & RESET
+   ========================================= */
+:root {
+    --bg-color: #EDF9FE;       /* Light blue background (Home) */
+    --white: #ffffff;          /* White background (Pages) */
+    --text-primary: #0E133A;   /* Dark Navy (Headings) */
+    --text-secondary: #5d6d81; /* Greyish (Descriptions) */
+    --accent: #7D2AE8;         /* Canva-like Purple */
+    --divider-color: #eaeaea;  /* Light grey for lines */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* =========================================
+   2. HEADER & NAVIGATION (Shared)
+   ========================================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: transparent; /* Adapts to bg behind it */
+    z-index: 100;
+}
+
+.logo-signature {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+/* Ensure link wraps don't break design */
+.logo-signature a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* =========================================
+   3. HOMEPAGE SPECIFIC STYLES
+   ========================================= */
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 10%;
+    min-height: 80vh;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 5px;
+    line-height: 1.1;
+    color: var(--text-primary);
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-top: 0;
+    font-weight: 500;
+}
+
+.hero-desc {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 20px 0;
+    max-width: 90%;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.social-icons .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: var(--text-primary);
+    color: var(--white);
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+}
+
+.social-icons .icon:hover {
+    transform: translateY(-5px);
+    background-color: var(--accent);
+}
+
+/* Github Button */
+.github-btn {
+    display: inline-block;
+    background-color: #0E133A;
+    color: var(--white);
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.github-btn:hover {
+    background-color: #333;
+}
+
+.github-btn i {
+    color: #f1c40f; /* Yellow star */
+    margin-right: 8px;
+}
+
+/* Skills Sections */
+.section-title {
+    text-align: center;
+    margin: 60px 0 40px;
+}
+
+.section-title h1 {
+    font-size: 3rem;
+    color: var(--text-primary);
+}
+
+.skill-row {
+    display: flex;
+    align-items: center;
+    padding: 40px 10%;
+    margin-bottom: 20px;
+}
+
+.reverse-layout {
+    flex-direction: row-reverse;
+}
+
+.skill-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.skill-image img {
+    width: 80%;
+    max-width: 450px;
+}
+
+.skill-content {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.skill-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.tech-stack-icons {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-list li {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.skill-list li i {
+    color: #ff9f00; /* Lightning orange */
+    margin-right: 12px;
+    margin-top: 5px;
+}
+
+/* =========================================
+   4. LEGAL & SUPPORT PAGE STYLES (Digimate)
+   ========================================= */
+
+/* Use this class on the <main> tag for Terms, Privacy, Support */
+.page-wrapper {
+    background-color: var(--white);
+    min-height: 80vh; /* Pushes footer down */
+    padding-top: 40px;
+    padding-bottom: 60px;
+    width: 100%;
+}
+
+.content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.last-updated {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+}
+
+/* Divider Line */
+.divider {
+    border: 0;
+    border-top: 1px solid var(--divider-color);
+    margin: 40px 0;
+}
+
+/* Text Sections */
+.legal-section {
+    margin-bottom: 30px;
+}
+
+.legal-section h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.legal-section p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.legal-section ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.legal-section li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* Support Bubble (Floating) */
+.support-bubble {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #0066FF; /* Bright Blue for support */
+    color: var(--white);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.support-bubble:hover {
+    transform: scale(1.1);
+}
+
+/* =========================================
+   5. FOOTER (Shared)
+   ========================================= */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #EDF9FE; /* Matches Home bg */
+    margin-top: auto; /* Ensures footer sits at bottom */
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    color: var(--text-primary);
+}
+
+/* =========================================
+   6. RESPONSIVE DESIGN (Mobile)
+   ========================================= */
+@media (max-width: 900px) {
+    /* Navigation */
+    nav {
+        display: none; /* Simple mobile hide */
+    }
+
+    /* Hero */
+    .hero {
+        flex-direction: column-reverse;
+        padding: 50px 5%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-content {
+        padding-right: 0;
+    }
+    
+    .hero-desc {
+        margin: 20px auto;
+    }
+    
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    /* Skills */
+    .skill-row {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+    }
+    
+    .reverse-layout {
+        flex-direction: column;
+    }
+
+    .skill-image {
+        margin-bottom: 30px;
+    }
+
+    .skill-list li {
+        justify-content: left;
+        text-align: left;
+    }
+    
+    .tech-stack-icons {
+        justify-content: center;
+    }
+
+    /* Legal Pages Mobile */
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .content-container {
+        padding: 0 20px;
+    }
+    
+    .support-bubble {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
